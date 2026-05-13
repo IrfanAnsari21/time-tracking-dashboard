@@ -195,3 +195,85 @@ body {
     }
 }
 
+
+/* ---------- Tablet Responsive ---------- */
+@media screen and (min-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+   .container {
+    width: 600px;
+    grid-template-columns: repeat(3, 1fr);
+   }
+
+   .profile-card {
+    grid-column: 1/4;
+   }
+   
+   .card .card-bottom .time {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1rem;
+
+    & .current-hours {
+        font-size: 40px;
+    }
+
+    & .previous-hours {
+        margin-top: 0.5rem;
+    }
+   }
+}
+
+/* ----------- Desktop Responsive ---------- */
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 900px;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .profile-card {
+        grid-column: 1/2;
+        grid-row: 1/3;
+
+        & .top {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 300px;
+
+            & img {
+                width: 70px;
+                height: 70px;
+            }
+
+            & .account-name {
+                margin-top: 2rem;
+
+                & .small-text .name {
+                    font-size: 35px;
+                    line-height: 2.5rem;
+                }
+            }
+        }
+
+        & .bottom .time-list {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+    }
+
+    .card .card-bottom .time {
+        margin-top: 1.5rem;
+
+        & .current-hours {
+            font-size: 50px;
+        }
+    }
+}
