@@ -1,0 +1,197 @@
+:root {
+    --Purple-600: hsl(246, 80%, 60%);
+    --Orange-300: hsl(15, 100%, 70%);
+    --Blue-300: hsl(195, 74%, 62%);
+    --Pink-400: hsl(348, 100%, 68%);
+    --Green-400: hsl(145, 58%, 55%);
+    --Purple-700: hsl(264, 64%, 52%);
+    --Yellow-300: hsl(43, 84%, 65%);
+    --Navy-950: hsl(226, 43%, 10%);
+    --Navy-900: hsl(235, 46%, 20%);
+    --Purple-500: hsl(235, 45%, 61%);
+    --Navy-200: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Rubik';
+    background-color: var(--Navy-950);
+    padding: 1.5rem;
+}
+
+/* ---------- Mobile first ---------- */
+.container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Styling Profile Card */
+.profile-card {
+    width: 100%;
+    background-color: var(--Navy-900);
+    border-radius: 10px;
+
+    & .top {
+        background-color: var(--Purple-600);
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+        border-radius: 10px;
+
+        & img {
+            width: 60px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-right: 0.8rem;
+        }
+
+        & .account-name .small-text {
+            color: var(--Navy-200);
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 1.3rem;
+
+            & .name {
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+
+    & .bottom .time-list {
+        padding: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & button {
+            border: none;
+            outline: none;
+            background: transparent;
+            color: var(--Purple-500);
+            font-size: 14px;
+            cursor: pointer;
+
+            &.active {
+                color: white;
+            }
+
+            &:hover {
+                color: var(--Navy-200);
+                transition: all 0.2s ease;
+            }
+        }
+    }
+}
+
+/* Styling General Cards */
+.card {
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    overflow: hidden;
+
+    & .card-top {
+        background-size: 60px;
+        background-repeat: no-repeat;
+        background-position: right 15px top -5px;
+        min-height: 2rem;
+    }
+
+    & .card-bottom {
+        background-color: var(--Navy-900);
+        padding: 1.5rem 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--Purple-500);
+            transition: all 0.3s ease;
+
+        }
+
+        & .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & .title {
+                color: white;
+            }
+        }
+
+        & .time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+            font-weight: 300;
+
+            & .current-hours {
+                color: white;
+                font-size: 30px;
+            }
+
+            & .previous-hours {
+                color: var(--Navy-200);
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/* Add SVG and coloring top */
+.work-card {
+    background-color: var(--Orange-300);
+
+    & .card-top {
+        background-image: url(images/icon-work.svg);
+    }
+}
+
+.play-card {
+    background-color: var(--Blue-300);
+
+    & .card-top {
+        background-image: url(images/icon-play.svg);
+    }
+}
+
+.study-card {
+    background-color: var(--Pink-400);
+
+    & .card-top {
+        background-image: url(images/icon-study.svg);
+    }
+}
+
+.exercise-card {
+    background-color: var(--Green-400);
+
+    & .card-top {
+        background-image: url(images/icon-exercise.svg);
+    }
+}
+
+.social-card {
+    background-color: var(--Purple-700);
+
+    & .card-top {
+        background-image: url(images/icon-social.svg);
+    }
+}
+
+.self-care-card {
+    background-color: var(--Yellow-300);
+
+    & .card-top {
+        background-image: url(images/icon-self-care.svg);
+    }
+}
+
